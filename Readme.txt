@@ -14,9 +14,9 @@ Le code : le code se compose de trois classes essentielles :
 •	Parking : La classe Parking représente un état possible du parking. Il contient des membres statiques qui décrivent les caractéristiques générales du parking (taille, sortie, etc.) et des membres propres à chaque instance qui décrivent l'état actuel du parking (positions des voitures, etc.). Il contient également une référence à l'objet Move qui l'a généré, ce qui permet de retracer les déplacements effectués pour arriver à cet état. Les membres statiques de la classe comprennent une matrice indiquant l'état des emplacements de parking (occupé ou non), un ensemble de hashage contenant tous les parkings générés, les dimensions du parking, la position de la sortie, le nombre d'emplacements bloqués entre la voiture cible (goal car) et la sortie, et un indicateur indiquant si la sortie est située à l'avant ou à l'arrière de la voiture cible. Il y a également des compteurs pour le nombre de voitures, l'orientation des voitures, la plage d'index des voitures et la taille des voitures. Les membres de chaque instance de la classe comprennent la position des voitures dans leurs rangées (définissant le parking) et un déplacement reliant cette situation à la précédente. Il y a également des méthodes pour vérifier si le parking est résolu ou s'il est impossible de résoudre le parking en raison de la situation de la voiture cible.
 
 
-Remarque : on s’est inspiré de travaux trouvés sur internet sur des jeux similaires pour la l’implémentation de la méthode de hachage car elle permet d’optimiser la recherche d'une solution, en évitant de retomber sur des états déjà explorés, et en permettant de comparer rapidement des états.
+Remarque :  la méthode de hachage permet d’optimiser la recherche d'une solution, en évitant de retomber sur des états déjà explorés, et en permettant de comparer rapidement des états.
 
-Exemple : 
+Exemple d'exécution: 
 Parking: 5 fois 5
 +---+---+---+---+---+
 |     1   1         |
